@@ -32,8 +32,9 @@ let flag=false;
 let captcha=[];
 let click1=0;
 let click2=0;
-let verify=document.createElement('button');
-verify.innerHTML='verify';
+let verify=document.getElementById('verify');
+// let verify=document.createElement('button');
+// verify.innerHTML='verify';
 function readCaptcha(e){
     // counter++;
     e.getAttribute('data-ns-img');
@@ -47,9 +48,11 @@ function readCaptcha(e){
     // flag=true;
     console.log(click1,click2);
     if(click1!=0 && flag==false){
-        let reset=document.createElement('button');
-        reset.innerHTML='reset';
-        mainDev.append(reset);
+        let reset=document.getElementById('reset');
+        
+        // let reset=document.createElement('button');
+        // reset.innerHTML='reset';
+        // mainDev.append(reset);
         reset.onclick=resetCaptcha;
     }
     if(click1 != 0 && click2 !=0 && !mainDev.contains(verify)){
@@ -61,7 +64,7 @@ function readCaptcha(e){
 
 function checkCaptcha(){
     if(click1==click2){
-    let inter=" Verified";
+    let inter="  Verified";
     mainDev.append(" "+inter);
     
     }
