@@ -33,7 +33,7 @@ let captcha=[];
 let click1=0;
 let click2=0;
 let verify=document.createElement('button');
-verify.innerHTML='verify';
+verify.innerHTML='Verify';
 function readCaptcha(e){
     // counter++;
     e.getAttribute('data-ns-img');
@@ -61,7 +61,7 @@ function readCaptcha(e){
 
 function checkCaptcha(){
     if(click1==click2){
-    let inter="  Verified";
+    let inter=" Verified";
     mainDev.append(" "+inter);
     
     }
